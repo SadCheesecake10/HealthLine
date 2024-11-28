@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 350px; /* Aumentado el tamaño de las tarjetas */
+      margin: auto;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+      background-color: #f1f1f1;
+      padding: 20px 0; /* Aumentado el espacio en el encabezado */
+      font-size: 24px; /* Aumentado el tamaño de la fuente */
+      font-weight: bold;
+    }
+
+    .title {
+      color: #333;
+      font-size: 20px; /* Aumentado el tamaño de la fuente */
+      margin: 20px 0; /* Aumentado el margen */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px; /* Aumentado el espacio entre las tarjetas */
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    img {
+      border-bottom: 2px solid #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#3B7E58">
+      <a href="/" class="navbar-brand">HealthLine App</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="/adminclick" class="nav-item nav-link">Admin</a>
+          <a href="/doctorclick" class="nav-item nav-link">Doctor</a>
+          <a href="/patientclick" class="nav-item nav-link">Patient</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="/adminclick">
+        <div class="card">
+          <div class="header">I'm an admin</div>
+          <img src="{% static 'images/admin.svg' %}" alt="Admin" style="width:100%">
+        </div>
+      </a>
+    </div>
+
+    <div class="grid-item">
+      <a href="/doctorclick">
+        <div class="card">
+          <div class="header">I'm a doctor</div>
+          <img src="{% static 'images/doctors.svg' %}" alt="Doctor" style="width:100%">
+        </div>
+      </a>
+    </div>
+
+    <div class="grid-item">
+      <a href="/patientclick">
+        <div class="card">
+          <div class="header">I'm a patient</div>
+          <img src="{% static 'images/patient.svg' %}" alt="Patient" style="width:100%">
+        </div>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HealthLine</title>
+  <link rel="icon" type="image/svg+xml" href="{% static 'images/HL Logo.svg' %}">
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  {%block content%}
+
+  {%endblock content%}
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>

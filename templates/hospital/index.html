@@ -1,0 +1,37 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 20px; /* Espacio superior */
+      margin-bottom: 20px; /* Espacio inferior */
+      background-image: url('{% static "images/HL Logo.svg" %}');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 300px; /* Ajusta la altura según sea necesario */
+      padding-top: 50px; /* Espacio interior superior */
+      padding-bottom: 50px; /* Espacio interior inferior */
+    }
+
+    .alert {
+      margin: 0px;
+    }
+    }
+  </style>
+</head>
+
+<div class="jumbotron">
+  <br><br><br><br><br>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+{% endblock content %}
